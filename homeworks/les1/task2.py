@@ -1,7 +1,14 @@
 # Пересчет секунд в чч:мм:сс
 print('Программа преобразования количества секунд в формат чч:мм:сс\n')
-my_time = input('Введите количество секунд числом: \n')
-my_time = int(my_time)
+
+while True:
+    my_time = input('Введите количество секунд числом: \n')
+    if my_time.isdigit():
+        my_time = int(my_time)
+        break
+    else:
+        print('Ошибка ввода, это не число')
+
 my_hour = my_time // 3600
 my_minute = (my_time % 3600) // 60
 my_second = (my_time % 3600) % 60
